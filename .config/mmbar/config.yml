@@ -1,0 +1,21 @@
+interval: 2
+widgets:
+- widgets.coinbase.Coinbase:
+    currency: btc_to_usd
+    color: '#b5bd68' 
+#- widgets.wifi.WifiWidget wlan0
+#- widgets.disk.DiskWidget
+- widgets.wifi.WifiWidget wlp3s0
+#- widgets.wired.WiredWidget enp0s25
+- widgets.battery.BatteryWidget:
+    device: BAT0
+    color_full: '#b5bd68' 
+    color_low: '#cc6666'
+- widgets.mpdstatus.MpdStatusWidget:
+    server: mjh.ece.vt.edu
+    password: Password1
+    port: 6600
+- widgets.weather.WeatherWidget KBCB
+- widgets.clock.ClockWidget
+
+
