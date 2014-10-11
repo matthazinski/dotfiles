@@ -12,3 +12,6 @@ cp $BASEDIR/.xinitrc $BASEDIR/.Xmodmap $BASEDIR/.wallpaper.jpg $HOME
 cp -r $BASEDIR/.i3 $HOME
 
 # In the future this file will be more useful
+
+# TODO: Ansible integration - have ansible do the samething as deploy.sh
+# TODO: This script should also pull the scripts repo

@@ -1,4 +1,4 @@
 dotfiles
 ========
 
-Config files from my home directory
+Machine-independent config files from my home directory.
