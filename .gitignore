@@ -1,1 +1,3 @@
 *.swp
+private/
+private/rsync-pass.txt
