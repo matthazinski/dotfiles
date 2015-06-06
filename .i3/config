@@ -212,3 +212,4 @@ for_window [class="hl2_linux"] fullscreen
 gaps inner 24
 gaps outer 0
 
+exec --no-startup-id compton -b
