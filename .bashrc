@@ -81,34 +81,41 @@ On_IWhite='\e[0;107m'   # White
 
 
 # User specific aliases and functions
-
-if [ $(hostname -d) == 'wuvt.vt.edu' ]
-then
-
-    PS1="\[$Yellow\][\u@\h \W]\$\[\e[0m\] "
-
-elif [ $(hostname -d) == 'hazinski.net' ]
-then
-    PS1="\[$Blue\][\u@\h \W]\$\[\e[0m\] "
-    
-elif [ $(hostname -d) == 'vtluug.org' ]
-then
-    PS1="\[$BBlue\][\u@\h \W]\$\[\e[0m\] "
- 
-elif [ $(hostname -d) == 'vtcsec.ru' ]
-then
-    PS1="\[$Green\][\u@\h \W]\$\[\e[0m\] "
-
-elif [ $(hostname -d) == 'ece.vt.edu' ]
-then
-    PS1="\[$Purple\][\u@\h \W]\$\[\e[0m\] "
-    
+# Fix errors on freebsd
+hostname -d >/dev/null 2>&1
+if [ $? == 1 ]
+then 
+    PS1="\[$Red\][\u@\h \W]\$\[\e[0m\] "
 else
-    PS1="\[$Blue\][\u@\h \W]\$\[\e[0m\] "
+
+
+    if [ $(hostname -d) == 'wuvt.vt.edu' ]
+    then
+
+        PS1="\[$Yellow\][\u@\h \W]\$\[\e[0m\] "
+
+    elif [ $(hostname -d) == 'hazinski.net' ]
+    then
+        PS1="\[$Blue\][\u@\h \W]\$\[\e[0m\] "
+        
+    elif [ $(hostname -d) == 'vtluug.org' ]
+    then
+        PS1="\[$BBlue\][\u@\h \W]\$\[\e[0m\] "
+    
+    elif [ $(hostname -d) == 'vtcsec.ru' ]
+    then
+        PS1="\[$Green\][\u@\h \W]\$\[\e[0m\] "
+
+    elif [ $(hostname -d) == 'ece.vt.edu' ]
+    then
+        PS1="\[$Purple\][\u@\h \W]\$\[\e[0m\] "
+        
+    else
+        PS1="\[$Blue\][\u@\h \W]\$\[\e[0m\] "
+
+    fi
 
 fi
-
-
 
 
 #. /home/matt/code/scripts/private/z/z.sh
