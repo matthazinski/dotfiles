@@ -135,3 +135,6 @@ syntax on
 " Vimwiki stuff
 let g:vimwiki_fold_lists = 1
 let g:vimwiki_folding = 1
+
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
