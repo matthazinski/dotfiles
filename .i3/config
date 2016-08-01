@@ -208,8 +208,3 @@ for_window [class="st-256color"] border 1pixel
 for_window [instance="Steam"] border 1pixel
 for_window [instance="Steam"] floating enable
 for_window [class="hl2_linux"] fullscreen
-
-gaps inner 24
-gaps outer 0
-
-exec --no-startup-id compton -b
