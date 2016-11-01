@@ -138,3 +138,4 @@ let g:vimwiki_folding = 1
 
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
+let NERDTreeIgnore = ['\.pyc$']
